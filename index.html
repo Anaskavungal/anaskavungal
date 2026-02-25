@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anas.K - Portfolio</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom selection color */
+        ::selection {
+            background-color: #27272a; /* zinc-800 */
+            color: #ffffff;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-300 font-sans antialiased overflow-x-hidden">
+
+    <!-- NAVIGATION -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+            <a href="#" class="text-xl font-light tracking-widest text-white uppercase" onclick="closeGallery(); closeAdmin();">
+                ANAS<span class="font-bold">.K</span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <div id="desktop-nav" class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-sm tracking-wide hover:text-white transition-colors" onclick="closeGallery(); closeAdmin();">About</a>
+                <a href="#portfolio" class="text-sm tracking-wide hover:text-white transition-colors" onclick="closeGallery(); closeAdmin();">Portfolio</a>
+                <a href="#bts" class="text-sm tracking-wide hover:text-white transition-colors" onclick="closeGallery(); closeAdmin();">BTS</a>
+                <a href="#experience" class="text-sm tracking-wide hover:text-white transition-colors" onclick="closeGallery(); closeAdmin();">Experience</a>
+                <a href="#skills" class="text-sm tracking-wide hover:text-white transition-colors" onclick="closeGallery(); closeAdmin();">Skills</a>
+                <a href="#contact" class="text-sm tracking-wide hover:text-white transition-colors" onclick="closeGallery(); closeAdmin();">Contact</a>
+                <a href="#contact" class="px-5 py-2 border border-zinc-700 hover:bg-white hover:text-black transition-all text-sm tracking-widest uppercase" onclick="closeGallery(); closeAdmin();">
+                    Hire Me
+                </a>
+            </div>
+
+            <!-- Mobile Nav Toggle -->
+            <button class="md:hidden text-zinc-300 hover:text-white" onclick="toggleMenu()">
+                <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-zinc-900 border-b border-zinc-800 py-4 px-6 flex-col space-y-4 shadow-xl">
+            <a href="#about" class="text-sm tracking-wide text-zinc-400 hover:text-white transition-colors" onclick="toggleMenu(); closeGallery(); closeAdmin();">About</a>
+            <a href="#portfolio" class="text-sm tracking-wide text-zinc-400 hover:text-white transition-colors" onclick="toggleMenu(); closeGallery(); closeAdmin();">Portfolio</a>
+            <a href="#bts" class="text-sm tracking-wide text-zinc-400 hover:text-white transition-colors" onclick="toggleMenu(); closeGallery(); closeAdmin();">BTS</a>
+            <a href="#experience" class="text-sm tracking-wide text-zinc-400 hover:text-white transition-colors" onclick="toggleMenu(); closeGallery(); closeAdmin();">Experience</a>
+            <a href="#skills" class="text-sm tracking-wide text-zinc-400 hover:text-white transition-colors" onclick="toggleMenu(); closeGallery(); closeAdmin();">Skills</a>
+            <a href="#contact" class="text-sm tracking-wide text-zinc-400 hover:text-white transition-colors" onclick="toggleMenu(); closeGallery(); closeAdmin();">Contact</a>
+        </div>
+    </nav>
+
+    <!-- MAIN HOME VIEW -->
+    <div id="home-view" class="block">
+        
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+            <div class="absolute top-1/4 right-0 w-96 h-96 bg-zinc-800/20 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute bottom-1/4 left-10 w-72 h-72 bg-zinc-900/40 rounded-full blur-3xl -z-10"></div>
+
+            <div class="max-w-7xl mx-auto px-6 md:px-12 w-full grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 z-10">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 border border-zinc-800 rounded-full bg-zinc-900/50 text-xs tracking-widest uppercase mb-4">
+                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                        <span>Available for Freelance</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-light text-white leading-tight">
+                        Visualizing <br/>
+                        <span class="font-bold italic text-zinc-500">Brands</span> <br/>
+                        Through Lenses.
+                    </h1>
+                    <p class="text-lg md:text-xl text-zinc-400 max-w-lg leading-relaxed">
+                        Creative Commercial Photographer & Videographer with 6+ years of experience crafting premium visual content for e-commerce, jewelry, and furniture.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-4 pt-4">
+                        <a href="#portfolio" class="px-8 py-4 bg-white text-black font-medium tracking-wide hover:bg-zinc-200 transition-colors flex items-center">
+                            Explore Work <i class="fa-solid fa-chevron-right ml-2 text-sm"></i>
+                        </a>
+                        <a href="#contact" class="px-8 py-4 border border-zinc-700 hover:border-zinc-400 text-white transition-colors">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative h-[60vh] md:h-[80vh] w-full rounded-sm overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?auto=format&fit=crop&q=80" alt="Camera Setup" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-zinc-900/30">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="flex flex-col md:flex-row gap-16">
+                    <div class="md:w-1/3">
+                        <h2 class="text-sm tracking-widest text-zinc-500 uppercase mb-4">About Me</h2>
+                        <h3 class="text-3xl md:text-4xl font-light text-white mb-6">Capturing the essence of products with precision & AI workflows.</h3>
+                    </div>
+                    <div class="md:w-2/3 space-y-6 text-zinc-400 leading-relaxed text-lg font-light">
+                        <p>I am a dedicated Creative Commercial Photographer and Videographer based in India, specializing in high-quality visual content production. With over 6 years in the industry, my expertise spans across studio lighting, advanced retouching, and cinematic video editing.</p>
+                        <p>My work is driven by the desire to enhance brand presence and marketing performance. I manage end-to-end production—from the initial shoot planning to the final, international-standard post-production. Recently, I've integrated modern AI workflows to push creative boundaries further and deliver exceptional results faster.</p>
+                        
+                        <!-- CV Download Button -->
+                        <div class="pt-2">
+                            <a href="https://drive.google.com/file/d/1HaXWEiNkPsk4NXyLCqFyjn_isLCrdDZp/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 border border-zinc-700 text-white hover:bg-white hover:text-black transition-all text-sm tracking-widest uppercase">
+                                <i class="fa-solid fa-file-pdf mr-2"></i> View CV
+                            </a>
+                        </div>
+
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-zinc-800 mt-8">
+                            <div><h4 class="text-3xl text-white font-light">6+</h4><p class="text-sm text-zinc-500 mt-1 uppercase tracking-wider">Years Exp.</p></div>
+                            <div><h4 class="text-3xl text-white font-light">100+</h4><p class="text-sm text-zinc-500 mt-1 uppercase tracking-wider">Projects</p></div>
+                            <div><h4 class="text-3xl text-white font-light">AI</h4><p class="text-sm text-zinc-500 mt-1 uppercase tracking-wider">Integrated</p></div>
+                            <div><h4 class="text-3xl text-white font-light">4K</h4><p class="text-sm text-zinc-500 mt-1 uppercase tracking-wider">Cinematic</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-24">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="flex justify-between items-end mb-16">
+                    <div>
+                        <h2 class="text-sm tracking-widest text-zinc-500 uppercase mb-4">Selected Works</h2>
+                        <h3 class="text-4xl font-light text-white">Visual Capabilities</h3>
+                        <p class="text-zinc-500 mt-2 text-sm">(Click on any project to view gallery)</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- AJC Jewel -->
+                    <div onclick="openGallery('ajc')" class="group relative overflow-hidden h-[400px] bg-zinc-900 cursor-pointer">
+                        <img src="https://i.postimg.cc/qqGf67QS/f1.jpg" alt="Jewelry Photography" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-8 left-8">
+                            <p class="text-xs tracking-widest text-zinc-300 uppercase mb-2">AJC Jewel Manufacturers</p>
+                            <h4 class="text-2xl text-white font-light">Jewelry Photography</h4>
+                        </div>
+                    </div>
+
+                    <!-- TipTop Furniture -->
+                    <div onclick="openGallery('tiptop')" class="group relative overflow-hidden h-[400px] bg-zinc-900 cursor-pointer">
+                        <img src="https://i.postimg.cc/BZVW1gPz/254298211-1018353398953781-103732256308318300-n.jpg" alt="Furniture Photography" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-8 left-8">
+                            <p class="text-xs tracking-widest text-zinc-400 uppercase mb-2">TipTop Furniture</p>
+                            <h4 class="text-2xl text-white font-light">Furniture Photography</h4>
+                        </div>
+                    </div>
+
+                    <!-- Slidex Media -->
+                    <div onclick="openGallery('slidex')" class="group relative overflow-hidden h-[400px] bg-zinc-900 cursor-pointer">
+                        <img src="https://i.postimg.cc/ThvDCgL4/ee53ddddc8801eaa90470f5c25934df9.jpg" alt="E-Commerce Photography" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-8 left-8">
+                            <p class="text-xs tracking-widest text-zinc-400 uppercase mb-2">Slidex Media</p>
+                            <h4 class="text-2xl text-white font-light">Diverse Photography</h4>
+                        </div>
+                    </div>
+
+                    <!-- Digital Marketing -->
+                    <div onclick="openGallery('digital')" class="group relative overflow-hidden h-[400px] bg-zinc-900 cursor-pointer">
+                        <img src="https://i.postimg.cc/WbR6hnkR/cb88d7323b243657060c9bb4546f065d.jpg" alt="Brand Aesthetics" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-8 left-8">
+                            <p class="text-xs tracking-widest text-zinc-400 uppercase mb-2">Digital Marketing</p>
+                            <h4 class="text-2xl text-white font-light">Social Media Visuals</h4>
+                        </div>
+                    </div>
+
+                    <!-- Web Development (5th Card) -->
+                    <div onclick="openGallery('webdev')" class="group relative overflow-hidden h-[400px] bg-zinc-900 cursor-pointer md:col-span-2 border-t border-zinc-800 md:border-t-0">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80" alt="Web Development Projects" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-8 left-8">
+                            <p class="text-xs tracking-widest text-zinc-400 uppercase mb-2">Web Design & Development</p>
+                            <h4 class="text-2xl md:text-3xl text-white font-light">Website Projects</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Behind The Scenes Section -->
+        <section id="bts" class="py-24 bg-zinc-950 border-t border-zinc-900/50">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="flex justify-between items-end mb-12">
+                    <div>
+                        <h2 class="text-sm tracking-widest text-zinc-500 uppercase mb-4">On Location</h2>
+                        <h3 class="text-4xl font-light text-white">Behind The Scenes</h3>
+                        <p class="text-zinc-500 mt-2 text-sm">(Click on the videos to play)</p>
+                    </div>
+                </div>
+
+                <!-- Videos Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- BTS Video 1 -->
+                    <div onclick="openModal('https://res.cloudinary.com/drrmbsti4/video/upload/v1771802611/VID20211007134027_bkxjxn.mp4', 'video')" class="relative group overflow-hidden bg-zinc-900 aspect-video rounded-sm cursor-pointer border border-zinc-800">
+                        <video src="https://res.cloudinary.com/drrmbsti4/video/upload/v1771802611/VID20211007134027_bkxjxn.mp4" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <div class="w-14 h-14 bg-black/60 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform backdrop-blur-sm border border-zinc-700/50">
+                                <i class="fa-solid fa-play text-white text-xl ml-1"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <h4 class="text-white text-md font-light tracking-wide drop-shadow-md">On Location Shoot 1</h4>
+                        </div>
+                    </div>
+
+                    <!-- BTS Video 2 -->
+                    <div onclick="openModal('https://res.cloudinary.com/drrmbsti4/video/upload/v1771802611/VID20211123121401_n9dv0v.mp4', 'video')" class="relative group overflow-hidden bg-zinc-900 aspect-video rounded-sm cursor-pointer border border-zinc-800">
+                        <video src="https://res.cloudinary.com/drrmbsti4/video/upload/v1771802611/VID20211123121401_n9dv0v.mp4" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <div class="w-14 h-14 bg-black/60 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform backdrop-blur-sm border border-zinc-700/50">
+                                <i class="fa-solid fa-play text-white text-xl ml-1"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <h4 class="text-white text-md font-light tracking-wide drop-shadow-md">On Location Shoot 2</h4>
+                        </div>
+                    </div>
+
+                    <!-- BTS Video 3 -->
+                    <div onclick="openModal('https://res.cloudinary.com/drrmbsti4/video/upload/v1771802610/StorySaver.net-slidex_media-Video-1771800162292_xkx1ap.mp4', 'video')" class="relative group overflow-hidden bg-zinc-900 aspect-video rounded-sm cursor-pointer border border-zinc-800">
+                        <video src="https://res.cloudinary.com/drrmbsti4/video/upload/v1771802610/StorySaver.net-slidex_media-Video-1771800162292_xkx1ap.mp4" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <div class="w-14 h-14 bg-black/60 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform backdrop-blur-sm border border-zinc-700/50">
+                                <i class="fa-solid fa-play text-white text-xl ml-1"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <h4 class="text-white text-md font-light tracking-wide drop-shadow-md">Behind The Scenes</h4>
+                        </div>
+                    </div>
+
+                    <!-- BTS Video 4 -->
+                    <div onclick="openModal('https://res.cloudinary.com/drrmbsti4/video/upload/v1771803545/VID20230406120213_vyzy58.mp4', 'video')" class="relative group overflow-hidden bg-zinc-900 aspect-video rounded-sm cursor-pointer border border-zinc-800">
+                        <video src="https://res.cloudinary.com/drrmbsti4/video/upload/v1771803545/VID20230406120213_vyzy58.mp4" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <div class="w-14 h-14 bg-black/60 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform backdrop-blur-sm border border-zinc-700/50">
+                                <i class="fa-solid fa-play text-white text-xl ml-1"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <h4 class="text-white text-md font-light tracking-wide drop-shadow-md">Location Shoot 3</h4>
+                        </div>
+                    </div>
+
+                    <!-- BTS Video 5 -->
+                    <div onclick="openModal('https://res.cloudinary.com/drrmbsti4/video/upload/v1771803543/VID20230406120311_jfpef4.mp4', 'video')" class="relative group overflow-hidden bg-zinc-900 aspect-video rounded-sm cursor-pointer border border-zinc-800">
+                        <video src="https://res.cloudinary.com/drrmbsti4/video/upload/v1771803543/VID20230406120311_jfpef4.mp4" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <div class="w-14 h-14 bg-black/60 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform backdrop-blur-sm border border-zinc-700/50">
+                                <i class="fa-solid fa-play text-white text-xl ml-1"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <h4 class="text-white text-md font-light tracking-wide drop-shadow-md">Location Shoot 4</h4>
+                        </div>
+                    </div>
+
+                    <!-- BTS Video 6 -->
+                    <div onclick="openModal('https://res.cloudinary.com/drrmbsti4/video/upload/v1771802610/StorySaver.net-slidex_media-Video-1771800095273_k2ahkp.mp4', 'video')" class="relative group overflow-hidden bg-zinc-900 aspect-video rounded-sm cursor-pointer border border-zinc-800">
+                        <video src="https://res.cloudinary.com/drrmbsti4/video/upload/v1771802610/StorySaver.net-slidex_media-Video-1771800095273_k2ahkp.mp4" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <div class="w-14 h-14 bg-black/60 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform backdrop-blur-sm border border-zinc-700/50">
+                                <i class="fa-solid fa-play text-white text-xl ml-1"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <h4 class="text-white text-md font-light tracking-wide drop-shadow-md">Location Shoot 5</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24 bg-zinc-900/30">
+            <div class="max-w-4xl mx-auto px-6 md:px-12">
+                <h2 class="text-sm tracking-widest text-zinc-500 uppercase mb-4 text-center">Journey</h2>
+                <h3 class="text-4xl font-light text-white mb-16 text-center">Professional Experience</h3>
+
+                <div class="space-y-12">
+                    <div class="relative pl-8 md:pl-0">
+                        <div class="hidden md:block absolute left-1/2 w-px h-full bg-zinc-800 transform -translate-x-1/2 top-2"></div>
+                        <div class="md:flex items-center justify-between w-full">
+                            <div class="md:w-5/12 text-left md:text-right md:pr-8 mb-4 md:mb-0">
+                                <h4 class="text-xl text-white">Founder & Photographer / Videographer</h4>
+                                <p class="text-zinc-500 text-sm mt-1">2019 - Present</p>
+                            </div>
+                            <div class="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-zinc-400 border-4 border-zinc-950 transform -translate-x-2 md:-translate-x-1/2 mt-1.5 md:mt-0 z-10"></div>
+                            <div class="md:w-5/12 md:pl-8">
+                                <h5 class="text-lg text-white font-medium mb-2">SLIDEX MEDIA</h5>
+                                <p class="text-zinc-400 text-sm leading-relaxed mb-3">Freelance creative studio delivering commercial media and digital marketing services. Handled professional photography, videography, full editing, and website development.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8 md:pl-0">
+                        <div class="hidden md:block absolute left-1/2 w-px h-full bg-zinc-800 transform -translate-x-1/2 top-2"></div>
+                        <div class="md:flex items-center justify-between w-full md:flex-row-reverse">
+                            <div class="md:w-5/12 text-left md:pl-8 mb-4 md:mb-0">
+                                <h4 class="text-xl text-white">Photographer & Videographer</h4>
+                                <p class="text-zinc-500 text-sm mt-1">1 Year</p>
+                            </div>
+                            <div class="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-zinc-700 border-4 border-zinc-950 transform -translate-x-2 md:-translate-x-1/2 mt-1.5 md:mt-0 z-10"></div>
+                            <div class="md:w-5/12 md:pr-8 md:text-right">
+                                <h5 class="text-lg text-white font-medium mb-2">TipTop Furniture Pvt Ltd</h5>
+                                <p class="text-zinc-400 text-sm leading-relaxed mb-3">Produced high-quality product photography for furniture catalogs. Managed image editing, background cleanup, color correction, and content optimization.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8 md:pl-0">
+                        <div class="hidden md:block absolute left-1/2 w-px h-full bg-zinc-800 transform -translate-x-1/2 top-2"></div>
+                        <div class="md:flex items-center justify-between w-full">
+                            <div class="md:w-5/12 text-left md:text-right md:pr-8 mb-4 md:mb-0">
+                                <h4 class="text-xl text-white">Jewelry Photographer & Video Editor</h4>
+                                <p class="text-zinc-500 text-sm mt-1">2 Years</p>
+                            </div>
+                            <div class="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-zinc-700 border-4 border-zinc-950 transform -translate-x-2 md:-translate-x-1/2 mt-1.5 md:mt-0 z-10"></div>
+                            <div class="md:w-5/12 md:pl-8">
+                                <h5 class="text-lg text-white font-medium mb-2">AJC Jewel Manufacturers Ltd</h5>
+                                <p class="text-zinc-400 text-sm leading-relaxed mb-3">High-end jewelry photography and videography with advanced retouching. Designed promotional posters, managed social media, and e-commerce.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="text-center mb-16">
+                    <h2 class="text-sm tracking-widest text-zinc-500 uppercase mb-4">Technical Arsenal</h2>
+                    <h3 class="text-4xl font-light text-white">Software & Tools</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-zinc-900/50 p-8 border border-zinc-800 hover:border-zinc-600 transition-colors">
+                        <i class="fa-solid fa-camera text-zinc-400 text-3xl mb-6"></i>
+                        <h4 class="text-xl text-white font-light mb-6">Graphic Design</h4>
+                        <ul class="space-y-3 text-sm text-zinc-400">
+                            <li class="flex items-center"><div class="w-1.5 h-1.5 bg-white rounded-full mr-3"></div> Adobe Photoshop</li>
+                            <li class="flex items-center"><div class="w-1.5 h-1.5 bg-white rounded-full mr-3"></div> Adobe Lightroom</li>
+                            <li class="flex items-center"><div class="w-1.5 h-1.5 bg-white rounded-full mr-3"></div> Canva</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-zinc-900/50 p-8 border border-zinc-800 hover:border-zinc-600 transition-colors">
+                        <i class="fa-solid fa-video text-zinc-400 text-3xl mb-6"></i>
+                        <h4 class="text-xl text-white font-light mb-6">Video Editing</h4>
+                        <ul class="space-y-3 text-sm text-zinc-400">
+                            <li class="flex items-center"><div class="w-1.5 h-1.5 bg-white rounded-full mr-3"></div> Adobe Premiere Pro</li>
+                            <li class="flex items-center"><div class="w-1.5 h-1.5 bg-white rounded-full mr-3"></div> CapCut</li>
+                            <li class="flex items-center"><div class="w-1.5 h-1.5 bg-white rounded-full mr-3"></div> Wondershare Filmora</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-zinc-900/50 p-8 border border-zinc-800 hover:border-zinc-600 transition-colors">
+                        <i class="fa-solid fa-wand-magic-sparkles text-zinc-400 text-3xl mb-6"></i>
+                        <h4 class="text-xl text-white font-light mb-6">AI Creative Tools</h4>
+                        <ul class="space-y-3 text-sm text-zinc-400">
+                            <li class="flex items-center"><div class="w-1.5 h-1.5 bg-white rounded-full mr-3"></div> Adobe Firefly</li>
+                            <li class="flex items-center"><div class="w-1.5 h-1.5 bg-white rounded-full mr-3"></div> Veo 3.1</li>
+                            <li class="flex items-center"><div class="w-1.5 h-1.5 bg-white rounded-full mr-3"></div> Eleven Labs</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-zinc-900/50 p-8 border border-zinc-800 hover:border-zinc-600 transition-colors">
+                        <i class="fa-solid fa-desktop text-zinc-400 text-3xl mb-6"></i>
+                        <h4 class="text-xl text-white font-light mb-6">Web & E-Commerce</h4>
+                        <ul class="space-y-3 text-sm text-zinc-400">
+                            <li class="flex items-center"><div class="w-1.5 h-1.5 bg-white rounded-full mr-3"></div> Shopify & WooCommerce</li>
+                            <li class="flex items-center"><div class="w-1.5 h-1.5 bg-white rounded-full mr-3"></div> WordPress</li>
+                            <li class="flex items-center"><div class="w-1.5 h-1.5 bg-white rounded-full mr-3"></div> Meta Business Suite</li>
+                            <li class="flex items-center"><div class="w-1.5 h-1.5 bg-white rounded-full mr-3"></div> Social Media Mgmt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-white text-zinc-950">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-sm tracking-widest text-zinc-500 uppercase mb-4">Get In Touch</h2>
+                    <h3 class="text-4xl md:text-5xl font-light mb-8">Let's create something <br/><span class="font-bold">exceptional.</span></h3>
+                    
+                    <div class="space-y-6 mt-12">
+                        <a href="mailto:anaskavungal2@gmail.com" class="flex items-center text-lg hover:text-zinc-500 transition-colors">
+                            <div class="w-12 h-12 bg-zinc-100 flex items-center justify-center rounded-full mr-6">
+                                <i class="fa-solid fa-envelope text-xl"></i>
+                            </div>
+                            anaskavungal2@gmail.com
+                        </a>
+                        <a href="tel:+919539796546" class="flex items-center text-lg hover:text-zinc-500 transition-colors">
+                            <div class="w-12 h-12 bg-zinc-100 flex items-center justify-center rounded-full mr-6">
+                                <i class="fa-solid fa-phone text-xl"></i>
+                            </div>
+                            +91 9539796546
+                        </a>
+                        <div class="flex items-center text-lg">
+                            <div class="w-12 h-12 bg-zinc-100 flex items-center justify-center rounded-full mr-6">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            India
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 mt-12">
+                        <a href="https://www.instagram.com/an_as_kavungal?igsh=MWsxdGNmaWtyYndjbA==" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-zinc-300 flex items-center justify-center rounded-full hover:bg-zinc-950 hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/anas-kavungal-10821a160" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-zinc-300 flex items-center justify-center rounded-full hover:bg-zinc-950 hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-50 p-8 md:p-12 border border-zinc-200">
+                    <form id="contact-form" onsubmit="submitForm(event)" class="space-y-6">
+                        <!-- Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="7eaa9606-20a9-480c-ac94-27252bce0b84">
+                        
+                        <!-- Honeypot (To prevent spam) -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        
+                        <div>
+                            <label class="block text-xs tracking-widest uppercase text-zinc-500 mb-2">Name</label>
+                            <input type="text" name="name" required class="w-full bg-transparent border-b border-zinc-300 focus:border-zinc-950 py-2 outline-none transition-colors" placeholder="Your name" />
+                        </div>
+                        <div>
+                            <label class="block text-xs tracking-widest uppercase text-zinc-500 mb-2">Email</label>
+                            <input type="email" name="email" required class="w-full bg-transparent border-b border-zinc-300 focus:border-zinc-950 py-2 outline-none transition-colors" placeholder="Your email" />
+                        </div>
+                        <div>
+                            <label class="block text-xs tracking-widest uppercase text-zinc-500 mb-2">Project Details</label>
+                            <textarea name="message" required class="w-full bg-transparent border-b border-zinc-300 focus:border-zinc-950 py-2 outline-none transition-colors h-24 resize-none" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="w-full bg-zinc-950 text-white py-4 text-sm tracking-widest uppercase hover:bg-zinc-800 transition-colors mt-4">
+                            Send Message
+                        </button>
+                        
+                        <!-- Status message container -->
+                        <div id="form-message" class="hidden mt-4 text-sm text-center font-medium"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-zinc-950 py-8 border-t border-zinc-900 text-center text-zinc-500 text-sm">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; <span id="year"></span> Anas K. All rights reserved.</p>
+                <!-- Admin Panel Access Link -->
+                <button onclick="openAdmin()" class="mt-4 md:mt-0 text-zinc-600 hover:text-white transition-colors text-xs tracking-widest uppercase flex items-center">
+                    <i class="fa-solid fa-lock mr-2"></i> Admin Login
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- GALLERY VIEW -->
+    <div id="gallery-view" class="hidden min-h-screen bg-zinc-950 text-zinc-300 pb-24">
+        <!-- Gallery Header -->
+        <div class="pt-32 max-w-7xl mx-auto px-6 md:px-12">
+            <button onclick="closeGallery()" class="flex items-center text-sm tracking-widest uppercase hover:text-white transition-colors mb-10">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Back to Portfolio
+            </button>
+
+            <p id="gallery-client" class="text-sm tracking-widest text-zinc-500 uppercase mb-2">Client Name</p>
+            <h1 id="gallery-title" class="text-4xl md:text-5xl font-light text-white mb-6">Project Title</h1>
+            <p id="gallery-desc" class="text-zinc-400 max-w-2xl text-lg font-light mb-8">Project description goes here.</p>
+            
+            <div class="flex justify-between items-center border-b border-zinc-800 pb-6 mb-8">
+                <h3 class="text-xl text-white font-light">Project Gallery</h3>
+            </div>
+
+            <!-- Folders / Tabs Section -->
+            <div id="gallery-folders" class="flex space-x-6 mb-8 hidden overflow-x-auto pb-2 scrollbar-hide">
+                <button onclick="filterGallery('all')" id="tab-all" class="text-white border-b-2 border-white pb-2 px-2 text-sm tracking-widest uppercase transition-all flex items-center whitespace-nowrap">
+                    <i class="fa-solid fa-border-all mr-2"></i> All
+                </button>
+                <button onclick="filterGallery('image')" id="tab-image" class="text-zinc-500 border-b-2 border-transparent hover:text-white pb-2 px-2 text-sm tracking-widest uppercase transition-all flex items-center whitespace-nowrap">
+                    <i class="fa-regular fa-folder mr-2"></i> Photos
+                </button>
+                <button onclick="filterGallery('video')" id="tab-video" class="text-zinc-500 border-b-2 border-transparent hover:text-white pb-2 px-2 text-sm tracking-widest uppercase transition-all flex items-center whitespace-nowrap">
+                    <i class="fa-regular fa-folder-closed mr-2"></i> Videos
+                </button>
+                <button onclick="filterGallery('reels')" id="tab-reels" class="text-zinc-500 border-b-2 border-transparent hover:text-white pb-2 px-2 text-sm tracking-widest uppercase transition-all flex items-center hidden whitespace-nowrap">
+                    <i class="fa-brands fa-instagram mr-2"></i> Commercial Reels
+                </button>
+                <button onclick="filterGallery('posters')" id="tab-posters" class="text-zinc-500 border-b-2 border-transparent hover:text-white pb-2 px-2 text-sm tracking-widest uppercase transition-all flex items-center hidden whitespace-nowrap">
+                    <i class="fa-solid fa-image mr-2"></i> Creative Posters
+                </button>
+                <button onclick="filterGallery('portrait')" id="tab-portrait" class="text-zinc-500 border-b-2 border-transparent hover:text-white pb-2 px-2 text-sm tracking-widest uppercase transition-all flex items-center hidden whitespace-nowrap">
+                    <i class="fa-solid fa-user mr-2"></i> Portrait
+                </button>
+                <button onclick="filterGallery('wedding')" id="tab-wedding" class="text-zinc-500 border-b-2 border-transparent hover:text-white pb-2 px-2 text-sm tracking-widest uppercase transition-all flex items-center hidden whitespace-nowrap">
+                    <i class="fa-solid fa-ring mr-2"></i> Wedding
+                </button>
+                <button onclick="filterGallery('food')" id="tab-food" class="text-zinc-500 border-b-2 border-transparent hover:text-white pb-2 px-2 text-sm tracking-widest uppercase transition-all flex items-center hidden whitespace-nowrap">
+                    <i class="fa-solid fa-utensils mr-2"></i> Food
+                </button>
+                <button onclick="filterGallery('product')" id="tab-product" class="text-zinc-500 border-b-2 border-transparent hover:text-white pb-2 px-2 text-sm tracking-widest uppercase transition-all flex items-center hidden whitespace-nowrap">
+                    <i class="fa-solid fa-box mr-2"></i> Product
+                </button>
+                <button onclick="filterGallery('webdev')" id="tab-webdev" class="text-zinc-500 border-b-2 border-transparent hover:text-white pb-2 px-2 text-sm tracking-widest uppercase transition-all flex items-center hidden whitespace-nowrap">
+                    <i class="fa-solid fa-code mr-2"></i> Web Dev
+                </button>
+                <button onclick="filterGallery('catalog')" id="tab-catalog" class="text-zinc-500 border-b-2 border-transparent hover:text-white pb-2 px-2 text-sm tracking-widest uppercase transition-all flex items-center hidden whitespace-nowrap">
+                    <i class="fa-solid fa-book-open mr-2"></i> Catalogs
+                </button>
+            </div>
+
+            <!-- Image/Video Grid -->
+            <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Images will be injected here by Javascript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ADMIN VIEW (BACKEND) -->
+    <div id="admin-view" class="hidden min-h-screen bg-zinc-950 text-zinc-300 pb-24 pt-32">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="flex justify-between items-center mb-8 border-b border-zinc-800 pb-6">
+                <div>
+                    <h1 class="text-3xl font-light text-white"><i class="fa-solid fa-gear mr-3 text-zinc-500"></i>Backend Dashboard</h1>
+                    <p class="text-zinc-500 mt-2 text-sm">Manage your portfolio images and videos.</p>
+                </div>
+                <button onclick="closeAdmin()" class="bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded text-sm tracking-widest uppercase transition-colors">
+                    Exit Admin
+                </button>
+            </div>
+
+            <!-- Login Section -->
+            <div id="admin-login-section" class="max-w-md mx-auto bg-zinc-900 border border-zinc-800 p-8 rounded mt-12 shadow-2xl">
+                <div class="text-center mb-8">
+                    <div class="w-16 h-16 bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-4 border border-zinc-700">
+                        <i class="fa-solid fa-lock text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl text-white font-light">Admin Access</h3>
+                    <p class="text-zinc-500 text-sm mt-2">Please enter your credentials.</p>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs tracking-widest uppercase text-zinc-500 mb-2">User ID</label>
+                        <input type="text" id="login-userid" class="w-full bg-zinc-950 border border-zinc-800 text-white p-3 rounded outline-none focus:border-white transition-colors" placeholder="Enter User ID" />
+                    </div>
+                    <div>
+                        <label class="block text-xs tracking-widest uppercase text-zinc-500 mb-2">Password</label>
+                        <input type="password" id="login-password" class="w-full bg-zinc-950 border border-zinc-800 text-white p-3 rounded outline-none focus:border-white transition-colors" placeholder="Enter Password" />
+                    </div>
+                    <button onclick="verifyAdminLogin()" class="w-full bg-white text-black py-3 rounded text-sm tracking-widest uppercase font-bold hover:bg-zinc-300 transition-colors mt-6">
+                        Login to Dashboard
+                    </button>
+                    <p id="login-error" class="text-red-500 text-sm mt-4 hidden text-center bg-red-500/10 py-2 rounded border border-red-500/20">Invalid User ID or Password!</p>
+                </div>
+            </div>
+
+            <!-- Dashboard Section (Hidden until logged in) -->
+            <div id="admin-dashboard-section" class="hidden grid md:grid-cols-3 gap-8">
+                <!-- Controls Sidebar -->
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded h-fit">
+                    <h3 class="text-xl text-white font-light mb-6 border-b border-zinc-800 pb-2">Add New Content</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs tracking-widest uppercase text-zinc-500 mb-2">Select Project</label>
+                            <select id="admin-project" onchange="loadAdminCategories()" class="w-full bg-zinc-950 border border-zinc-800 text-white p-3 rounded outline-none focus:border-white transition-colors">
+                                <option value="ajc">AJC Jewel Manufacturers</option>
+                                <option value="tiptop">TipTop Furniture</option>
+                                <option value="slidex">Slidex Media (Diverse)</option>
+                                <option value="digital">Digital Marketing</option>
+                                <option value="webdev">Web Development</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs tracking-widest uppercase text-zinc-500 mb-2">Select Tab / Category</label>
+                            <select id="admin-category" onchange="renderAdminGrid()" class="w-full bg-zinc-950 border border-zinc-800 text-white p-3 rounded outline-none focus:border-white transition-colors">
+                                <!-- Populated dynamically -->
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs tracking-widest uppercase text-zinc-500 mb-2">Image/Video Link (Postimg, Cloudinary, etc.)</label>
+                            <input type="text" id="admin-url" placeholder="Paste link here..." class="w-full bg-zinc-950 border border-zinc-800 text-white p-3 rounded outline-none focus:border-white transition-colors" />
+                        </div>
+
+                        <button onclick="adminAddContent()" class="w-full bg-white text-black py-3 rounded text-sm tracking-widest uppercase font-bold hover:bg-zinc-300 transition-colors mt-4">
+                            <i class="fa-solid fa-plus mr-2"></i> Add to Portfolio
+                        </button>
+                        
+                        <p id="admin-status" class="text-green-500 text-sm mt-2 hidden text-center">Added successfully!</p>
+                    </div>
+                </div>
+
+                <!-- Preview Grid -->
+                <div class="md:col-span-2 bg-zinc-900 border border-zinc-800 p-6 rounded min-h-[500px]">
+                    <h3 class="text-xl text-white font-light mb-6 border-b border-zinc-800 pb-2">Current Contents</h3>
+                    <div id="admin-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMAGE & VIDEO MODAL (LIGHTBOX) -->
+    <div id="image-modal" class="fixed inset-0 z-[100] hidden bg-black/95 flex items-center justify-center opacity-0 transition-opacity duration-300">
+        <button onclick="closeModal()" class="absolute top-6 right-6 md:top-10 md:right-10 text-white hover:text-zinc-400 transition-colors z-50">
+            <i class="fa-solid fa-xmark text-4xl"></i>
+        </button>
+        <img id="modal-image" src="" alt="Popup Image" class="max-w-[95%] max-h-[95vh] object-contain shadow-2xl scale-95 transition-transform duration-300 hidden" />
+        <video id="modal-video" src="" controls class="max-w-[95%] max-h-[95vh] object-contain shadow-2xl scale-95 transition-transform duration-300 hidden"></video>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-zinc-950/90', 'backdrop-blur-md', 'border-b', 'border-zinc-900', 'py-4');
+                navbar.classList.remove('bg-transparent', 'py-6');
+            } else {
+                navbar.classList.remove('bg-zinc-950/90', 'backdrop-blur-md', 'border-b', 'border-zinc-900', 'py-4');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        // Form Submit Logic
+        function submitForm(event) {
+            event.preventDefault();
+            // ... [Web3Forms logic preserved]
+            const form = event.target;
+            const btn = document.getElementById('submit-btn');
+            const msgBox = document.getElementById('form-message');
+            
+            const accessKey = form.querySelector('[name="access_key"]').value;
+            if(accessKey === 'YOUR_ACCESS_KEY_HERE') {
+                msgBox.classList.remove('hidden', 'text-green-600');
+                msgBox.classList.add('text-red-500');
+                msgBox.innerHTML = "Action Required: Please get your Access Key from Web3Forms and paste it in the code.";
+                return;
+            }
+
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Sending...';
+            btn.disabled = true;
+            msgBox.classList.add('hidden');
+            
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    btn.innerHTML = 'Send Message';
+                    btn.disabled = false;
+                    msgBox.classList.remove('hidden', 'text-red-500');
+                    msgBox.classList.add('text-green-600');
+                    msgBox.innerHTML = "Message Sent Successfully! We will get back to you soon.";
+                    form.reset();
+                } else {
+                    console.log(response);
+                    throw new Error(json.message);
+                }
+            })
+            .catch(error => {
+                btn.innerHTML = 'Send Message';
+                btn.disabled = false;
+                msgBox.classList.remove('hidden', 'text-green-600');
+                msgBox.classList.add('text-red-500');
+                msgBox.innerHTML = "Something went wrong! Please try again later.";
+                console.log(error);
+            });
+        }
+
+        window.saveToCloud = () => {};
+        window.currentGalleryProject = null;
+
+        // Portfolio Data (Main Database)
+        window.portfolioProjects = {
+            'ajc': {
+                client: 'AJC Jewel Manufacturers',
+                title: 'Jewelry Photography',
+                description: 'High-end jewelry photography and videography with advanced retouching.',
+                images: [
+                    'https://i.postimg.cc/qqGf67QS/f1.jpg', 
+                    'https://i.postimg.cc/pXFbHFG7/ertyu-(2).jpg', 
+                    'https://i.postimg.cc/RZWjRnK9/ertyu-(3).jpg',
+                    'https://i.postimg.cc/fbX14n8P/vhj.jpg', 
+                    'https://i.postimg.cc/zBFMBwZB/rtyu.jpg', 
+                    'https://i.postimg.cc/9X1KHBYN/sertyu.jpg',
+                    'https://i.postimg.cc/59zPQp17/234567890.jpg',
+                    'https://i.postimg.cc/8PVZRWPB/4567890.jpg',
+                    'https://i.postimg.cc/d1b4SZRK/ASDFGH.jpg',
+                    'https://i.postimg.cc/3Rsnb0j8/asdrfyu.jpg',
+                    'https://i.postimg.cc/50hnkQ5L/dddd.jpg',
+                    'https://i.postimg.cc/kMSjRw95/dfg-(1).jpg',
+                    'https://i.postimg.cc/yYzLm9Ym/edfghj.jpg',
+                    'https://i.postimg.cc/RFkXbJ1t/ertyui-(1).jpg',
+                    'https://i.postimg.cc/ZYNfvjZf/ertyui-(2).jpg',
+                    'https://i.postimg.cc/DfGC45FX/eryui.jpg',
+                    'https://i.postimg.cc/Zn6VkYj1/gfcbvhfgvj.jpg',
+                    'https://i.postimg.cc/y6Rf3nBx/output-(2).jpg',
+                    'https://i.postimg.cc/vBJ3Sx7t/rtyj.jpg',
+                    'https://i.postimg.cc/Bb2MWZNm/rtyui-(1).jpg',
+                    'https://i.postimg.cc/SRcD0QVd/sdfyu.jpg',
+                    'https://i.postimg.cc/tTK2mndb/sdrtyui.jpg',
+                    'https://i.postimg.cc/wxNWRFHR/SG.jpg',
+                    'https://i.postimg.cc/hjkp3Q8c/t.jpg',
+                    'https://i.postimg.cc/wMD0KxFV/ty-(1).jpg',
+                    'https://i.postimg.cc/HnbBGW39/vjhhuihihf.jpg',
+                    'https://i.postimg.cc/kMSjRw9S/we5rt6.jpg',
+                    'https://i.postimg.cc/3rGL0974/wtvfgbu.jpg',
+                    'https://i.postimg.cc/MTCdrf01/yu.jpg'
+                ],
+                videos: [
+                    'https://res.cloudinary.com/drrmbsti4/video/upload/v1771639789/AQPiWWszBDUB-4KOiUPkxsOzBz-aAs32X_cf7oDnr2aGATV11Stsd4Wi4JZiEmtqPAot4dYDpiDGzRJZdJAdV4q790LETP6o4AHW3c0_oawpdh.mp4',
+                    'https://res.cloudinary.com/drrmbsti4/video/upload/v1771716858/AQPY0Of3vfw7xLAPk2xIQqEj2r3yRRQOxx_NhA6UUWG-akP0-DouLaSItpZ04Z3uo1Qs5-MmUsZv1aX7-ySBGH-y7_ZPh0ZMrmItiwo_ovqzmd.mp4',
+                    'https://res.cloudinary.com/drrmbsti4/video/upload/v1771716893/AQOmf38BPDo1Wks2L29i0cBlJjuXATH8It03BWOiQPP2Kz_AoFULVXO5k8lf4vpYS3aBChE7MzNbWR7xDrZ2asZQyKXYfu-zHsc9I5g_srehvs.mp4',
+                    'https://res.cloudinary.com/drrmbsti4/video/upload/v1771716899/AQOM1ArZQrDnRAC-RFZR_-2WecRNcVYn8lFjhsuqsqOvR_9kapCpNBdekYcm_ejuRm4COUGa3OlLrWRgZ6CX2Rw2Q1aODiZUdSZm1d4_axpvte.mp4',
+                    'https://res.cloudinary.com/drrmbsti4/video/upload/v1771716907/AQNEfvG31quMV9fD-iphjeoK5DxXjhEMZiF1YsjS-5DIZVKEPgmKRm1MEtfpmz4ApBliEmvI1GVHL-VWNTxAPt5icvlprkzNd5hsM1k_uw1xwb.mp4',
+                    'https://res.cloudinary.com/drrmbsti4/video/upload/v1771716972/AQMFtqUpF4wf3cGaQhzfPl4k-Q849dqsTQR5NvIsr3s0P1_GNaQJk-_sKorCPL_fiZDKiR2c7ipQ2FG3J8FEtxEDQ_KsFZZYkcWhhR4_xbd3yy.mp4',
+                    'https://res.cloudinary.com/drrmbsti4/video/upload/v1771716975/AQPzz7hSAUihw09r83lWFzC23x4XKn3du9IvjKhXyS5yE4un3Q0KnpxD6JwZehaPTpKuCRpU3YoSxC7_HRwbnqAA8RDCozBtKNiD9nc_bgxprs.mp4',
+                    'https://res.cloudinary.com/drrmbsti4/video/upload/v1771716993/AQPVIvPJwLaKP67XXQrcB8GcdFtqJUSvapYI6g_0da4tdJEv78e6RdfGVgzvfZzL-ym1N_A0lgucT5c30xnjaV93ec88y3mDhEWmGz8_mgnnsu.mp4',
+                    'https://res.cloudinary.com/drrmbsti4/video/upload/v1771717020/AQOkmUqqFcyokgIeEyVx4mcvL7QAH-OU9WXMBupyrKGY9jMuVn5i1h1K0r7IKF4FXd7dpXs5Oeckyp50k13Ia1QRpCJehpBww_K6M-I_sew0u3.mp4',
+                    'https://res.cloudinary.com/drrmbsti4/video/upload/v1771717039/AQOAeZxHjo6XvRHKikKXxq6KoqMcNJKvZU-OZZOfdEF13HcPKPGI329OJ3N_skbbpvGrDIE98IP95DMpNaunMN1AVBRPfKN15Rd-ULc_dd4z05.mp4',
+                    'https://res.cloudinary.com/drrmbsti4/video/upload/v1771717070/AQNknM-4vwWiYV53z9gt0EN9IbyHrW1XEclTExFy6YZeCulPC82QKgbO7OcfnOrJ9RrLxvPV0O54mkE3OQo_2gjPKN1zjFpfDdmPgcQ_ubgj2j.mp4'
+                ]
+            },
+            'tiptop': {
+                client: 'TipTop Furniture',
+                title: 'Furniture Photography',
+                description: 'Produced high-quality product photography for furniture catalogs.',
+                images: [
+                    'https://i.postimg.cc/BZVW1gPz/254298211-1018353398953781-103732256308318300-n.jpg',
+                    'https://i.postimg.cc/Qx92gTpD/270994798-267128128737645-1362378663321436077-n.jpg',
+                    'https://i.postimg.cc/qv2WSHbF/270194527-2106831769467522-3051928086805870302-n.jpg',
+                    'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80',
+                    'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80',
+                    'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80'
+                ]
+            },
+            'slidex': {
+                client: 'Slidex Media',
+                title: 'Diverse Photography',
+                description: 'Freelance creative studio delivering commercial media and digital marketing services.',
+                images: [], 
+                portrait: [
+                    'https://i.postimg.cc/c4mgHsS4/kipróbálva_a_pózt_a_n_a_s_k_mr_muhammed.jpg',
+                    'https://i.postimg.cc/pXZhT2Hd/kipróbálva_a_pózt_a_n_a_s_k_mr_muhammed_(1).jpg',
+                    'https://i.postimg.cc/tJymmZWf/asdfgh_jpg_(1).jpg',
+                    'https://i.postimg.cc/Hxbh248H/df_jpg.jpg',
+                    'https://i.postimg.cc/KjFsskBC/wertgh_jpg_(1).jpg'
+                ],
+                food: [
+                    'https://i.postimg.cc/wBMV8L2s/271515902_975769703336594_177206990395927562_n.jpg',
+                    'https://i.postimg.cc/R0hR5KdK/sdfgh.jpg',
+                    'https://i.postimg.cc/CK5NTk7j/583044857_18074895589979872_6725072307311297485_n.webp',
+                    'https://i.postimg.cc/g0jDF8sZ/IMG_20260202_133852.jpg',
+                    'https://i.postimg.cc/CxmNQmG4/sdf.jpg',
+                    'https://i.postimg.cc/R0hR5Kd1/566143526_18091974901659935_7217890804708029261_n.webp',
+                    'https://i.postimg.cc/YS03KYRF/asdfghj.jpg',
+                    'https://i.postimg.cc/Dz0gkL64/ghjk.jpg'
+                ],
+                product: [
+                    'https://i.postimg.cc/RZDxFNC3/34.jpg',
+                    'https://i.postimg.cc/NjzvM5Gh/3r.jpg',
+                    'https://i.postimg.cc/pL6MTpV2/qwe.jpg',
+                    'https://i.postimg.cc/CxQp1zML/wdf.jpg',
+                    'https://i.postimg.cc/7ZWr6fPP/wedf.jpg',
+                    'https://i.postimg.cc/0yB1QbkL/wer.jpg',
+                    'https://i.postimg.cc/RZ82myGq/273927002_338383418190832_5197358066594995062_n_webp.jpg',
+                    'https://i.postimg.cc/8z5VNhGp/wert.jpg',
+                    'https://i.postimg.cc/XYhtWmxp/273017071_330338298975605_8342066002188812861_n_webp.jpg',
+                    'https://i.postimg.cc/W1Hc3hpc/y.jpg',
+                    'https://i.postimg.cc/BnVf6XZb/zxc.jpg'
+                ]
+            },
+            'digital': {
+                client: 'Digital Marketing',
+                title: 'Social Media Visuals',
+                description: 'Created edited marketing visuals optimized for Instagram, Facebook, and online sales.',
+                images: [],
+                reels: [
+                    'https://res.cloudinary.com/drrmbsti4/video/upload/v1771724665/AQPsACme2tgnds2WYbUnSqYi8JXn-gSauvB3VTNGPUQpHzv5qRwCMGiUISF1vxSIKIhprPTwE_zhlABv_4MhGGvGHVsabsZ-ois_1_gsqalv.mp4',
+                    'https://res.cloudinary.com/drrmbsti4/video/upload/v1771716858/AQPY0Of3vfw7xLAPk2xIQqEj2r3yRRQOxx_NhA6UUWG-akP0-DouLaSItpZ04Z3uo1Qs5-MmUsZv1aX7-ySBGH-y7_ZPh0ZMrmItiwo_ovqzmd.mp4'
+                ],
+                posters: [
+                    'https://i.postimg.cc/vTKKV6f6/werty.jpg',
+                    'https://i.postimg.cc/kGGZGy6N/Untitled_1(1).jpg',
+                    'https://i.postimg.cc/2yyJyxbv/Untitled_1.jpg',
+                    'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80',
+                    'https://images.unsplash.com/photo-1616469829581-73993eb86b02?auto=format&fit=crop&q=80'
+                ]
+            },
+            'webdev': {
+                client: 'Web Design & Development',
+                title: 'Website Projects',
+                description: 'A collection of responsive websites and e-commerce platforms I have designed and developed.',
+                images: [],
+                liveWebsites: [
+                    { 
+                        title: 'Slidex Media Website', 
+                        url: 'https://slidexmedia.blogspot.com/?m=1', 
+                        thumb: 'https://i.postimg.cc/XJtjqz2P/Screenshot-2026-02-23-062605.png' 
+                    },
+                    { 
+                        title: 'AJC Jewel', 
+                        url: 'https://ajcjewel.com/', 
+                        thumb: 'https://i.postimg.cc/k4mwCJCj/Screenshot-2026-02-23-063215.png' 
+                    },
+                    { 
+                        title: 'Hokybo Furniture', 
+                        url: 'https://www.hokybo.com/', 
+                        thumb: 'https://i.postimg.cc/wTGVvcHQ/Screenshot-2026-02-23-063351.png' 
+                    }
+                ],
+                webdev: [
+                    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80'
+                ]
+            }
+        };
+
+        // UI Views
+        const homeView = document.getElementById('home-view');
+        const galleryView = document.getElementById('gallery-view');
+        const adminView = document.getElementById('admin-view');
+        
+        const galleryGrid = document.getElementById('gallery-grid');
+        const galleryFolders = document.getElementById('gallery-folders');
+
+        // ==== GALLERY LOGIC ====
+        function openGallery(projectId) {
+            window.currentGalleryProject = projectId;
+            const project = window.portfolioProjects[projectId];
+            if (!project) return;
+
+            document.getElementById('gallery-client').textContent = project.client;
+            document.getElementById('gallery-title').textContent = project.title;
+            document.getElementById('gallery-desc').textContent = project.description;
+
+            homeView.classList.replace('block', 'hidden');
+            galleryView.classList.replace('hidden', 'block');
+            window.scrollTo(0, 0);
+
+            galleryFolders.classList.remove('hidden');
+            
+            const tabs = ['image', 'video', 'catalog', 'reels', 'posters', 'portrait', 'wedding', 'food', 'product', 'webdev'];
+            tabs.forEach(tab => {
+                const el = document.getElementById(`tab-${tab}`);
+                if (el) {
+                    // Check if array exists and has items
+                    if (project[tab === 'image' ? 'images' : tab === 'video' ? 'videos' : tab] && project[tab === 'image' ? 'images' : tab === 'video' ? 'videos' : tab].length > 0) {
+                        el.classList.remove('hidden');
+                    } else {
+                        el.classList.add('hidden');
+                    }
+                }
+            });
+
+            renderGalleryImages(project);
+            filterGallery('all');
+        }
+
+        function closeGallery() {
+            galleryView.classList.replace('block', 'hidden');
+            homeView.classList.replace('hidden', 'block');
+            window.scrollTo(0, 0);
+        }
+
+        function filterGallery(type) {
+            const tabs = ['all', 'image', 'video', 'catalog', 'reels', 'posters', 'portrait', 'wedding', 'food', 'product', 'webdev'];
+            tabs.forEach(t => {
+                const btn = document.getElementById(`tab-${t}`);
+                if (btn) {
+                    if (t === type) {
+                        btn.classList.add('text-white', 'border-white');
+                        btn.classList.remove('text-zinc-500', 'border-transparent');
+                    } else {
+                        btn.classList.remove('text-white', 'border-white');
+                        btn.classList.add('text-zinc-500', 'border-transparent');
+                    }
+                }
+            });
+
+            const items = galleryGrid.children;
+            Array.from(items).forEach(item => {
+                if (type === 'all') {
+                    item.style.display = 'block';
+                } else if (item.dataset.type === type) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function renderGalleryImages(project) {
+            galleryGrid.innerHTML = '';
+            const fallbackImg = "this.onerror=null; this.src='https://placehold.co/600x600/27272a/71717a?text=Image+Blocked';";
+
+            // Loop through all keys in project to render them
+            const renderCategories = {
+                'videos': { icon: 'fa-video', type: 'video' },
+                'reels': { icon: 'fa-instagram', type: 'reels' },
+                'images': { icon: 'fa-image', type: 'image' },
+                'posters': { icon: 'fa-image', type: 'posters' },
+                'portrait': { icon: 'fa-user', type: 'portrait' },
+                'wedding': { icon: 'fa-ring', type: 'wedding' },
+                'food': { icon: 'fa-utensils', type: 'food' },
+                'product': { icon: 'fa-box', type: 'product' },
+                'webdev': { icon: 'fa-code', type: 'webdev' }
+            };
+
+            for (const [key, config] of Object.entries(renderCategories)) {
+                if (project[key] && project[key].length > 0) {
+                    project[key].forEach((src, index) => {
+                        const div = document.createElement('div');
+                        div.className = 'relative group overflow-hidden bg-zinc-900 aspect-square rounded-sm cursor-pointer border border-zinc-800';
+                        div.dataset.type = config.type;
+                        
+                        // If it's a video file type
+                        if(src.endsWith('.mp4') || key === 'videos' || key === 'reels') {
+                            div.onclick = () => openModal(src, 'video');
+                            div.innerHTML = `
+                                <video src="${src}" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" autoplay loop muted playsinline></video>
+                                <div class="absolute top-4 right-4 bg-zinc-100 text-black text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest"><i class="fa-solid ${config.icon} mr-1"></i> ${key}</div>
+                            `;
+                        } else {
+                            div.onclick = () => openModal(src, 'image');
+                            div.innerHTML = `
+                                <img src="${src}" onerror="${fallbackImg}" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
+                                <div class="absolute top-4 right-4 bg-zinc-100 text-black text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest"><i class="fa-solid ${config.icon} mr-1"></i> ${key}</div>
+                            `;
+                        }
+                        galleryGrid.appendChild(div);
+                    });
+                }
+            }
+            
+            // Add liveWebsites rendering logic
+            if (project.liveWebsites && project.liveWebsites.length > 0) {
+                project.liveWebsites.forEach((site, index) => {
+                    const siteDiv = document.createElement('div');
+                    siteDiv.className = 'relative group overflow-hidden bg-zinc-900 aspect-square rounded-sm cursor-pointer border border-zinc-800 flex flex-col items-center justify-center hover:border-blue-500/50 transition-colors';
+                    siteDiv.dataset.type = 'webdev';
+                    siteDiv.onclick = () => window.open(site.url, '_blank');
+                    siteDiv.innerHTML = `
+                        <img src="${site.thumb}" alt="${site.title}" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-all duration-500" />
+                        <div class="relative z-10 flex flex-col items-center justify-center p-4 text-center">
+                            <i class="fa-solid fa-globe text-5xl text-blue-400 mb-4 group-hover:scale-110 transition-transform drop-shadow-lg"></i>
+                            <h4 class="text-white text-xl font-light drop-shadow-md">${site.title}</h4>
+                            <p class="text-zinc-300 text-xs tracking-widest uppercase mt-2 drop-shadow-md">Click to Visit Live Site</p>
+                        </div>
+                        <div class="absolute top-4 right-4 z-10 bg-blue-500 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest shadow-lg"><i class="fa-solid fa-link mr-1"></i> Live Site</div>
+                    `;
+                    galleryGrid.appendChild(siteDiv);
+                });
+            }
+        }
+
+        // ==== ADMIN PANEL LOGIC ====
+
+        const validCategories = ['images', 'videos', 'reels', 'posters', 'portrait', 'wedding', 'food', 'product', 'webdev'];
+
+        function openAdmin() {
+            homeView.classList.add('hidden');
+            galleryView.classList.add('hidden');
+            adminView.classList.remove('hidden');
+            
+            // Reset Login UI elements
+            document.getElementById('admin-login-section').classList.remove('hidden');
+            document.getElementById('admin-dashboard-section').classList.add('hidden');
+            document.getElementById('login-userid').value = '';
+            document.getElementById('login-password').value = '';
+            document.getElementById('login-error').classList.add('hidden');
+            
+            window.scrollTo(0, 0);
+        }
+
+        function verifyAdminLogin() {
+            const userId = document.getElementById('login-userid').value;
+            const pass = document.getElementById('login-password').value;
+            const errorMsg = document.getElementById('login-error');
+
+            if(userId === '9539796546' && pass === 'Anaskmon2@') {
+                // Correct credentials
+                document.getElementById('admin-login-section').classList.add('hidden');
+                document.getElementById('admin-dashboard-section').classList.remove('hidden');
+                loadAdminCategories(); // Load database content only after login
+            } else {
+                // Wrong credentials
+                errorMsg.classList.remove('hidden');
+            }
+        }
+
+        function closeAdmin() {
+            adminView.classList.add('hidden');
+            homeView.classList.remove('hidden');
+        }
+
+        function loadAdminCategories() {
+            const projectKey = document.getElementById('admin-project').value;
+            const categorySelect = document.getElementById('admin-category');
+            
+            categorySelect.innerHTML = ''; // clear
+            
+            validCategories.forEach(cat => {
+                const opt = document.createElement('option');
+                opt.value = cat;
+                opt.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+                categorySelect.appendChild(opt);
+            });
+
+            renderAdminGrid();
+        }
+
+        function renderAdminGrid() {
+            const projectKey = document.getElementById('admin-project').value;
+            const category = document.getElementById('admin-category').value;
+            const grid = document.getElementById('admin-grid');
+            
+            grid.innerHTML = '';
+            const project = window.portfolioProjects[projectKey];
+
+            if(!project[category]) {
+                project[category] = []; // Initialize empty array if it doesn't exist
+            }
+
+            if(project[category].length === 0) {
+                grid.innerHTML = '<p class="text-zinc-500 col-span-full">No items in this tab yet.</p>';
+                return;
+            }
+
+            project[category].forEach((src, index) => {
+                const div = document.createElement('div');
+                div.className = 'relative aspect-square bg-zinc-800 rounded group overflow-hidden border border-zinc-700';
+                
+                let mediaTag = src.endsWith('.mp4') ? 
+                    `<video src="${src}" class="w-full h-full object-cover"></video>` : 
+                    `<img src="${src}" class="w-full h-full object-cover" />`;
+
+                div.innerHTML = `
+                    ${mediaTag}
+                    <button onclick="adminDeleteContent('${projectKey}', '${category}', ${index})" class="absolute top-2 right-2 bg-red-600 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                `;
+                grid.appendChild(div);
+            });
+        }
+
+        function adminAddContent() {
+            const projectKey = document.getElementById('admin-project').value;
+            const category = document.getElementById('admin-category').value;
+            const urlInput = document.getElementById('admin-url');
+            const url = urlInput.value.trim();
+
+            if(!url) {
+                alert("Please enter a valid link.");
+                return;
+            }
+
+            if(!window.portfolioProjects[projectKey][category]) {
+                window.portfolioProjects[projectKey][category] = [];
+            }
+
+            // Push to memory array
+            window.portfolioProjects[projectKey][category].unshift(url);
+            
+            urlInput.value = ''; // clear input
+            renderAdminGrid(); // refresh grid
+            window.saveToCloud(); // Save to database
+
+            const status = document.getElementById('admin-status');
+            status.classList.remove('hidden');
+            setTimeout(() => status.classList.add('hidden'), 3000);
+        }
+
+        function adminDeleteContent(projectKey, category, index) {
+            window.portfolioProjects[projectKey][category].splice(index, 1);
+            renderAdminGrid();
+            window.saveToCloud(); // Save to database
+        }
+
+        // ==== MODAL LOGIC ====
+        const imageModal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+        const modalVideo = document.getElementById('modal-video');
+
+        function openModal(src, type = 'image') {
+            if (type === 'video') {
+                modalImage.classList.add('hidden');
+                modalVideo.classList.remove('hidden');
+                modalVideo.src = src;
+                modalVideo.play();
+                modalVideo.classList.remove('scale-95');
+                modalVideo.classList.add('scale-100');
+            } else {
+                modalVideo.classList.add('hidden');
+                modalImage.classList.remove('hidden');
+                modalImage.src = src;
+                modalImage.classList.remove('scale-95');
+                modalImage.classList.add('scale-100');
+            }
+            imageModal.classList.remove('hidden');
+            setTimeout(() => imageModal.classList.remove('opacity-0'), 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            imageModal.classList.add('opacity-0');
+            modalImage.classList.remove('scale-100');
+            modalImage.classList.add('scale-95');
+            modalVideo.classList.remove('scale-100');
+            modalVideo.classList.add('scale-95');
+            
+            setTimeout(() => {
+                imageModal.classList.add('hidden');
+                modalVideo.pause();
+                modalVideo.src = ""; 
+                document.body.style.overflow = 'auto'; 
+            }, 300); 
+        }
+
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal) closeModal();
+        });
+    </script>
+
+    <!-- FIREBASE CLOUD STORAGE -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInWithCustomToken, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        if (typeof __firebase_config !== 'undefined') {
+            const firebaseConfig = JSON.parse(__firebase_config);
+            const app = initializeApp(firebaseConfig);
+            const auth = getAuth(app);
+            const db = getFirestore(app);
+            const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+
+            let currentUser = null;
+
+            const initAuth = async () => {
+                try {
+                    if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                        await signInWithCustomToken(auth, __initial_auth_token);
+                    } else {
+                        await signInAnonymously(auth);
+                    }
+                } catch(e) {
+                    console.error("Auth Error:", e);
+                }
+            };
+
+            onAuthStateChanged(auth, (user) => {
+                currentUser = user;
+                if (user) {
+                    const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'portfolioData', 'mainData_v3');
+                    
+                    onSnapshot(docRef, (docSnap) => {
+                        if (docSnap.exists()) {
+                            // Update local data with cloud data
+                            window.portfolioProjects = docSnap.data().projects;
+                            
+                            // Live update the UI if elements are open
+                            if(typeof window.renderAdminGrid === 'function' && !document.getElementById('admin-view').classList.contains('hidden')) {
+                                window.renderAdminGrid();
+                            }
+                            if(window.currentGalleryProject && !document.getElementById('gallery-view').classList.contains('hidden')) {
+                                window.openGallery(window.currentGalleryProject);
+                            }
+                        } else {
+                            // Initialize cloud with current default data
+                            setDoc(docRef, { projects: window.portfolioProjects });
+                        }
+                    }, (error) => {
+                        console.error("Firestore Error:", error);
+                    });
+                }
+            });
+
+            initAuth();
+
+            // Replace the dummy save function with the real cloud save
+            window.saveToCloud = async () => {
+                if (!currentUser) return;
+                const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'portfolioData', 'mainData_v3');
+                try {
+                    await setDoc(docRef, { projects: window.portfolioProjects }, { merge: true });
+                } catch (e) {
+                    console.error("Failed to save:", e);
+                }
+            };
+        }
+    </script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919539796546" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-transform duration-300 z-50 group">
+        <i class="fa-brands fa-whatsapp"></i>
+        <!-- Hover Tooltip -->
+        <span class="absolute right-16 bg-zinc-800 text-white text-xs px-3 py-1.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            Chat on WhatsApp
+        </span>
+    </a>
+</body>
+</html>
